@@ -22,7 +22,7 @@ const Nav = () => {
       
     ]
   return (
-    <nav className='hidden md:flex items-center gap-6 font-medium capitalize text-myblue ml-[10rem]'>
+    <nav className='hidden md:flex h-fit self-end gap-6 font-medium capitalize text-myblue ml-[10rem]'>
       {
         items.map(({text, link}, i)=>(
           <Link key={i} href={link} className='border-b text-nowrap border-transparent hover:border-orange-500'>{text}</Link>

@@ -32,9 +32,9 @@ const HeroNavBar = () => {
 
   ]
   return (
-    <div className="flex flex-nowrap justify-between bg-picoteeblue px-4 md:px-8 py-2">
-      <div className="h-full grid items-center ">
-        <Logo className="h-[2.75rem] w-[3rem] md:h-[3.5rem] md:w-[4rem]" />
+    <div className="flex flex-nowrap justify-between bg-picoteeblue px-4 md:px-8 py-2 !h-fit">
+      <div className="h-fit grid items-center">
+        <Logo className="h-[1.75rem] w-[2rem] md:h-[2.5rem] md:w-[3rem]" />
       </div>
       <Breadcrumb>
         <BreadcrumbList className=" text-medium flex w-full justify-end gap-4 md:gap-6 text-white py-3 px-4 md:px-12 lg:px-18">
@@ -52,9 +52,9 @@ const HeroNavBar = () => {
           }
         </BreadcrumbList>
       </Breadcrumb>
-      <div className="flex md:hidden items-center gap-4 text-white">
-        <Link href={'/login'}>Login</Link>
-        <span><CustomSearch className=""/></span>
+      <div className="flex md:hidden gap-4 text-white h-[2rem] ">
+        <Link href={'/login'} className="h-fit pt-3">Login</Link>
+        <CustomSearch className=""/>
       </div>
     </div>
   )

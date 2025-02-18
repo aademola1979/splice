@@ -1,12 +1,12 @@
-import Link from "next/link"
+import AboutPage from "@/app/partial/about"
+
 
 
 const About = () => {
   return (
-    <div>
-        <Link href='/'></Link>
-    About
-    </div>
+    <>
+      <AboutPage />
+    </>
   )
 }
 

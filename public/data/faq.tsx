@@ -1,7 +1,7 @@
 const faqs = [
     { 
-        question: "What is CoRent?", 
-        response: "CoRent is a platform that allows users to find and share accommodation spaces, splitting the cost of rent among co-renters." 
+        question: "What is Splice?", 
+        response: "Splice is a platform that allows users to find and share accommodation spaces, splitting the cost of rent among co-renters." 
     },
     
     { 
@@ -10,8 +10,8 @@ const faqs = [
     },
     
     { 
-        question: "Is CoRent free to use?", 
-        response: "Yes, CoRent is free to use for finding and sharing accommodation spaces. However, posting accommodation spaces can be promoted to reach more users more quickly." 
+        question: "Is Splice free to use?", 
+        response: "Yes, Splice is free to use for finding and sharing accommodation spaces. However, posting accommodation spaces can be promoted to reach more users more quickly." 
     },
     { 
         question: "How do I find a co-renter?", 

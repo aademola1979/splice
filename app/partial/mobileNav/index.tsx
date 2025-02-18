@@ -9,7 +9,8 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SocialMedia from "@/app/partial/SocialMedia";
-import { Menu} from "lucide-react";
+import { Menu } from "lucide-react";
+import Logo from "../Logo";
 /*import { Contact2, HomeIcon, Menu, SearchCheckIcon } from "lucide-react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { CgCommunity } from "react-icons/cg";
@@ -20,7 +21,7 @@ import { FcAbout, FcPrivacy } from "react-icons/fc";*/
 type Item = {
     text: string,
     link: string,
-    icon?: React.ReactNode
+    color?: string
 }
 
 const MobileNav = () => {
@@ -31,18 +32,18 @@ const MobileNav = () => {
         {
             text: "Home",
             link: "/",
-            icon: ""
+            color: "bg-orange-500"
         },
         {
             text: "About",
             link: "/about",
-            icon: ""
+            color: ""
         },
 
         {
             text: "Contact",
             link: "/contact",
-            icon: ""
+            color: "bg-orange-200"
         },
 
     ]
@@ -51,53 +52,53 @@ const MobileNav = () => {
         {
             text: "How It Works",
             link: "/how_it_works",
-            icon: ""
+            color: "bg-blue-500"
         },
         {
             text: "Search For Co-renters",
-            link: "/findpartners",
-            icon: ""
+            link: "/find_partners",
+            color: ""
         },
         {
             text: "Search Neighbourhood",
             link: "/find_spaces",
-            icon: ""
+            color: "bg-blue-700"
         },
         {
             text: "Get Match",
             link: "/get_match",
-            icon: ""
+            color: "bg-rose-200"
         },
     ]
 
     const specialItems = [
 
-    
+
         {
             text: "Community",
             link: "/community",
-            icon: ""
+            color: "bg-orange-500"
         },
         {
             text: 'Career',
             link: '/career',
-            icon: ''
+            color: ''
         },
 
         {
             text: "Pricing",
             link: "/pricing",
-            icon: ""
+            color: "bg-blue-300"
         },
         {
             text: "Policy",
             link: "/policy",
-            icon: ""
+            color: "bg-orange-200"
         },
         {
             text: "Privacy",
             link: "/privacy",
-            icon: ""
+            color: "bg-blue-600"
         },
 
     ]
@@ -113,8 +114,11 @@ const MobileNav = () => {
                 </SheetTrigger>
                 <SheetTitle></SheetTitle>
                 <SheetDescription></SheetDescription>
-                <SheetContent side="left" className="min-h-[100vh] overflow-x-auto pt-[4rem] flex flex-col justify-between gap-4 bg-myblue ">
+                <SheetContent side="left" className="min-h-[100vh] overflow-x-auto pt-4 flex flex-col justify-between gap-4 bg-myblue ">
                     <div className="flex flex-col gap-4">
+                        <div className="w-full border-b pb-2">
+                            <Logo className="h-[1.75rem] w-[2rem]" />
+                        </div>
                         <div className=" grid gap-2 border-b pb-4">
                             {
                                 traditionalNavItmes.map((item: Item, i) => (
@@ -147,7 +151,7 @@ const MobileNav = () => {
                     </div>
                 </SheetContent>
             </Sheet>
-            
+
         </div>
     )
 }
@@ -162,11 +166,9 @@ function Card({ item }: { item: Item }) {
     return (
         <SheetClose asChild>
             <Link href={item.link} className={`${pathname === item.link ? "bg-blue-100 text-myblue" : ""} `}>
-                <div
-                    className={`${pathname === item.link ? " text-mybluetwo" : "text-white/90"} p-1 border-b border-transparent hover:border-white w-max`}
-                >
-                    {item.text}
-
+                <div className={`${pathname === item.link ? " text-mybluetwo" : "text-white/90"} p-1  w-max flex gap-4 items-center`}>
+                    <span className={`${item.color ? item.color : "bg-white"} h-2 w-2 rounded-full aspect-square pt-1`}></span>
+                    <span className="border-b border-transparent hover:border-white">{item.text} </span>
                 </div>
             </Link>
         </SheetClose>

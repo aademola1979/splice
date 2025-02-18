@@ -70,10 +70,8 @@ const RegistrationForm = () => {
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(myOnSubmit)} className="contact-form rounded shadow py-8 px-4 bg-myblue/90 text-white/90">
-            <div className="w-full flex justify-center">
-              <Logo className="h-[2.75rem] w-[3rem]" />
-            </div>
             <FormDescription className="text-white/80">Join CoRent to get matched with co-renters</FormDescription>
+           
             <FormField
               control={form.control}
               name="fullName"
@@ -111,6 +109,7 @@ const RegistrationForm = () => {
 
             </FormField>
 
+            <div className="grid md:flex gap-4 md:gap-2">
             <FormField
               control={form.control}
               name="password"
@@ -148,6 +147,7 @@ const RegistrationForm = () => {
             >
 
             </FormField>
+            </div>
 
             <Button disabled={isLoading} className="bg-orange-500 hover:bg-orange-400">Join</Button>
 

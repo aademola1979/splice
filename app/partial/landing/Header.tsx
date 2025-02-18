@@ -11,12 +11,11 @@ const Header = () => {
   return (
     <header className="w-full grid text-white gap-2">
       <div className="flex justify-between w-full gap-5 pt-4">
-        <Link href={'/'} className="flex gap-2">
-          <Logo className="h-[2.75rem] w-[3rem] md:h-[3.5rem] md:w-[4rem]" />
-          <div className="h-full flex items-end">
+        <Link href={'/'} className="flex gap-2 h-fit">
+          <Logo className="h-[1.75rem] w-[2rem] md:h-[2.5rem] md:w-[3rem]" />
+          <div className="h-full flex">
             <span className="text-lg md:text-2xl font-semibold md:font-bold">{siteMetadata.title}</span>
           </div>
-
         </Link>
         <Nav />
         <div className="flex gap-4 md:gap-8">

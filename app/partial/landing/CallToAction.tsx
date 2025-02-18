@@ -11,7 +11,7 @@ const CallToAction = () => {
     return (
         <SectionWrapper className="relative w-full bg-myblue">
             <Link href={'/'} className="">
-                <Logo className="h-[2.75rem] w-[3rem] md:h-[3.5rem] md:w-[4rem]" />
+                <Logo className="h-[1.75rem] w-[2rem] md:h-[2.5rem] md:w-[3rem]" />
             </Link>
             <div className="h-full grid  md:pl-0 pt-20">
                 <div className="grid detail_form text-white h-full gap-4 pl-6">
