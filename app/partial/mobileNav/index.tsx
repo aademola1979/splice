@@ -28,6 +28,8 @@ const MobileNav = () => {
 
     const pathname = usePathname()
 
+
+
     const traditionalNavItmes = [
         {
             text: "Home",
