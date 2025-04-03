@@ -19,13 +19,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     },
     {
       icon: PodcastIcon,
-      text: 'Posts',
+      text: 'All Posts',
       link: '/dashboard/post_view/posts/all_posts'
 
     },
     {
       icon: createLucideIcon,
-      text: 'Create',
+      text: 'Create Post',
       link: '/dashboard/post_view//posts/create_post'
 
     },
@@ -37,7 +37,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     },
     {
       icon: MdOutlineRecommend,
-      text: 'Recommended',
+      text: 'Recommended Posts',
       link: '/dashboard/post_view/posts/recommended_posts'
 
     }
