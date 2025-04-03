@@ -236,3 +236,15 @@ textarea{@apply flex min-h-[80px] w-full rounded-md px-3 pt-6 py-2 text-sm ring-
 }
 
 .contact-form{@apply grid gap-4 w-full min-w-[8rem] rounded-md !max-w-[25rem]}
+
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

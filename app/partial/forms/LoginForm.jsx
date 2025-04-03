@@ -62,7 +62,7 @@ const LoginForm = () => {
       <div className="flex flex-col">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(myOnSubmit)} className="contact-form rounded shadow px-4 py-8 bg-myblue/90">
-            <FormDescription className="text-white/80">Log in to CoRent to get matched with co-renters</FormDescription>
+            <FormDescription className="text-white/80">Log in to Splice to get matched with co-renters</FormDescription>
 
             <FormField
               control={form.control}

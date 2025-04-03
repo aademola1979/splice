@@ -10,6 +10,7 @@ import CallToAction from "@/app/partial/landing/CallToAction";
 import FrequentlyAskedQuestions from "./partial/landing/FrequentlyAskedQuestions";
 import HeroOne from "./partial/landing/HeroOne";
 import HeroTwo from "./partial/landing/HeroTwo";
+import CopyRight from "@/app/partial/CopyRight";
 
 
 
@@ -17,6 +18,9 @@ import HeroTwo from "./partial/landing/HeroTwo";
 
 
 export default function Home() {
+
+  
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -40,7 +44,7 @@ export default function Home() {
       <main className="landing-page w-full grid min-h-screen font-[family-name:var(--font-geist-sans)]">
         <div className="w-full h-full grid px-4 md:px-20 bg-[rgba(0,0,180,0.4)]">
           <Header />
-          <div className="bg-slate-300 rounded-t-[1.5rem] p-2  flex flex-col w-full h-full">
+          <div className="bg-slate-300 rounded-[1.5rem] p-2  flex flex-col w-full h-full">
             <HeroOne />
             <HeroNavBar />
             <HeroTwo />
@@ -52,6 +56,7 @@ export default function Home() {
             <FrequentlyAskedQuestions />
             <CallToAction />
           </div>
+          <CopyRight className="text-gray-300"/>
         </div>
       </main>
     </>

@@ -1,6 +1,6 @@
 
 import Link from "next/link"
-import LineLinkIcon from '../icons/arrow-right'
+import LineLinkIcon from '../../lib/utility/icons/arrow-right'
 
 type Input = {
     className:string,

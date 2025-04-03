@@ -9,7 +9,7 @@ import Menu from "./Menu"
 const CallToAction = () => {
 
     return (
-        <SectionWrapper className="relative w-full bg-myblue">
+        <SectionWrapper className="relative w-full bg-myblue rounded-b-[1.6rem]">
             <Link href={'/'} className="">
                 <Logo className="h-[1.75rem] w-[2rem] md:h-[2.5rem] md:w-[3rem]" />
             </Link>

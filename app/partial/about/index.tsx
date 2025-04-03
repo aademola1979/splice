@@ -6,7 +6,7 @@ import Vision from "./Vision"
 
 const AboutPage = () => {
   return (
-    <SectionWrapper className="pt-12">
+    <SectionWrapper className="pt-[4rem]">
         <Mission />
         <Vision />
         <ContactInfo />
