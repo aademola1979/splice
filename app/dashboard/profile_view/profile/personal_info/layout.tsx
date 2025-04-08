@@ -34,10 +34,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         
       ]
     return (
-        <section className="w-full grid  grid-rows-[96px_1fr] gap-4 min-h-[100vh] max-w-[100%] relative bg-[rgba(240,240,240)]">
+        <section className="grid  grid-rows-[auto_1fr] gap-4 min-h-full w-full relative">
         <div className="grid  gap-2">
-        <SubDashboardHeader className="">Personal Info</SubDashboardHeader>
-        <SubDashboardBar className="">
+        <SubDashboardHeader className="">Your Personal Info</SubDashboardHeader>
+        <SubDashboardBar className="border-0">
          {
            items.map(({text, link}, i)=>(
              <LinkDashboardHeader className="" key={i} link={link}>
@@ -47,9 +47,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
          }
          </SubDashboardBar>
         </div>
-        <main className="">
+        <div className="">
           {children}
-        </main>
+        </div>
       </section>
     )
   };

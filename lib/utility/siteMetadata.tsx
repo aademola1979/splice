@@ -1,8 +1,8 @@
 
 const siteMetadata = {
-    title: 'Splice',
-    author: 'Splice',
-    headerTitle: 'Splice',
+    title: 'Split Space',
+    author: 'PrgamaTech',
+    headerTitle: 'Split Space',
     description: 'Find a partner to share rented space and cost with, and cut your cost into half or more',
     language: 'en-us',
     theme: 'system', // system, dark or light

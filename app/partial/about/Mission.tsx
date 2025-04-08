@@ -1,16 +1,19 @@
 
 
 const Mission = async () => {
-  const data = await fetch('http://localhost:8000/profile')
+
+  const api_base_url = process.env.API_BASE_URL
+  
+  const data = await fetch(`${api_base_url}/api/user/f1d20524-474e-4fc4-8759-b47b21016343`)
   const newdata = await data.json()
   console.log(newdata)
-  const profile = newdata.profile;
-  const {first_name, middle_name, last_name, bio_data:{age, height, weight}} = profile
+  const profile = newdata;
+  const {first_name, middle_name, last_name} = profile
   return (
     <div className="h-screen">
       <p>
         Permit me to introduce my self. My name is {first_name} {middle_name} {last_name}.
-        I&apos;m {age} years old. I&apos;m {height} feet tall and weigh {weight}kg.
+      
       </p>
 
     </div>

@@ -1,13 +1,13 @@
-import MainDashboardSidebar from "@/app/partial/dashboard/bars";
+import MainDashboardSidebar from "@/app/partial/dashboard/bars/sidebars";
 
 
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <section className="md:grid md:grid-cols-[15rem_1fr] gap-4 min-h-[100vh] max-w-[100%] relative bg-[rgba(240,240,240)]">
+    <section className="md:grid md:grid-cols-[15rem_1fr] gap-4 min-h-[100vh] max-w-full relative ">
       <MainDashboardSidebar />
-      <main className="p-5">
+      <main className="bg-inherit p-5 md:p-10 lg:p-12">
         {children}
       </main>
     </section>

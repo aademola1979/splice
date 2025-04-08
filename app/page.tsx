@@ -41,10 +41,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="landing-page w-full grid min-h-screen font-[family-name:var(--font-geist-sans)]">
-        <div className="w-full h-full grid px-4 md:px-20 bg-[rgba(0,0,180,0.4)]">
+      <main className="landing-page !max-w-[100vw] grid min-h-screen font-[family-name:var(--font-geist-sans)]">
+        <div className="!max-w-full h-full grid px-4 md:px-20 bg-[rgba(0,0,180,0.4)]">
           <Header />
-          <div className="bg-slate-300 rounded-[1.5rem] p-2  flex flex-col w-full h-full">
+          <div className="bg-slate-300 rounded-[1.5rem] p-2  flex flex-col !max-w-full h-full">
             <HeroOne />
             <HeroNavBar />
             <HeroTwo />

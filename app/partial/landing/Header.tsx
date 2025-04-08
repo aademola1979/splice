@@ -7,13 +7,14 @@ import CustomSearch from "../search"
 import siteMetadata from "@/lib/utility/siteMetadata"
 
 
+
 const Header = () => {
   return (
     <header className="w-full grid text-white gap-2">
       <div className="flex justify-between w-full gap-5 pt-4">
         <Link href={'/'} className="flex gap-2 h-fit">
-          <Logo className="h-[1.75rem] w-[2rem] md:h-[2.5rem] md:w-[3rem]" />
-          <div className="h-full flex">
+          <Logo className="h-[1.75rem] w-[2rem] md:h-[3rem] md:w-[3.5rem]" />
+          <div className="h-full flex flex-col">
             <span className="text-lg md:text-2xl font-semibold md:font-bold">{siteMetadata.title}</span>
           </div>
         </Link>

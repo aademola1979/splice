@@ -30,12 +30,12 @@ const Facts = () => {
    
    ]
   return (
-    <div className=" text-gray-500 flex flex-col items-center w-full justify-center gap-4">
-        <div className="grid md:grid-cols-2 lg:flex items-center justify-center px-8 gap-4 w-full">
+    <div className=" text-gray-500 flex flex-col items-center !max-w-[100%] justify-center gap-4">
+        <div className="grid grid-cols-2 lg:flex items-center justify-center px-8 gap-4">
             {
                 facts.map(({num, text}, i)=>(
-                    <div key={i} className=" bg-gray-100 rounded-xl
-                     text-gray-700 p-2 flex-1 grid justify-center items-center shadow-sm">
+                    <div key={i} className="snap-start bg-gray-50 rounded-xl
+                     text-gray-700 p-2 flex-1 grid justify-center items-center shadow-md relative">
                         <div className="p-4">
                         <h3 className="w-full text-center text-orange-500 ">{num}</h3>
                         </div>

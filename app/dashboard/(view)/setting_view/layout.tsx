@@ -23,10 +23,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
   ]
     return (
-      <section className="w-full grid grid-rows-[96px_1fr] gap-4 min-h-[100vh] max-w-[100%] relative bg-[rgba(240,240,240)]">
+      <section className="w-full grid grid-rows-[96px_1fr] gap-4 min-h-[100vh] max-w-[100%] relative ">
         <div className="grid gap">
         <SubDashboardHeader className="">Settings</SubDashboardHeader>
-        <SubDashboardBar className="">
+        <SubDashboardBar className="border-0">
        {
         items.map(({text, link}, i)=>(
           <LinkDashboardHeader className="" key={i} link={link}>
