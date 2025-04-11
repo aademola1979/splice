@@ -9,7 +9,7 @@ const Intorduction = () => {
 
       </div>
       <div className="flex-1 text-sm md:text-base">
-        Split Space enables you to cut your rent into half or more. Space splitting is perfect for students, Small Scale Enterpreneurs (SMEs) and remote workers with tight budgets.
+        Split Space enables you to cut your rent into half or more by matching you with co-renter(s) whom you can share space and cost with. It is perfect for higher institution students with tight budgets.
       </div>
     </div>
   )

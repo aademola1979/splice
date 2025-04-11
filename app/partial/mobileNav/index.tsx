@@ -9,14 +9,12 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SocialMedia from "@/app/partial/SocialMedia";
-import { Menu } from "lucide-react";
 import Logo from "../Logo";
-/*import { Contact2, HomeIcon, Menu, SearchCheckIcon } from "lucide-react";
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { Contact, HomeIcon, Menu, SearchCheckIcon } from "lucide-react";
+import { FaMagnifyingGlass, FaUserGroup } from "react-icons/fa6";
 import { CgCommunity } from "react-icons/cg";
-import { TbBuildingCommunity } from "react-icons/tb";
-import { MdPrivateConnectivity } from "react-icons/md";
-import { FcAbout, FcPrivacy } from "react-icons/fc";*/
+import { MdOutlineWorkspacePremium, MdPolicy, MdPriceChange} from "react-icons/md";
+import { FcAbout, FcPrivacy } from "react-icons/fc";
 
 type Item = {
     text: string,
@@ -34,18 +32,18 @@ const MobileNav = () => {
         {
             text: "Home",
             link: "/",
-            color: "bg-orange-500"
+            color: ""
         },
         {
             text: "About",
             link: "/about",
-            color: ""
+            color: "text-green-300"
         },
 
         {
             text: "Contact",
             link: "/contact",
-            color: "bg-orange-200"
+            color: "text-green-400"
         },
 
     ]
@@ -54,7 +52,7 @@ const MobileNav = () => {
         {
             text: "How It Works",
             link: "/how_it_works",
-            color: "bg-blue-500"
+            color: "text-blue-500"
         },
         {
             text: "Search For Co-renters",
@@ -64,12 +62,12 @@ const MobileNav = () => {
         {
             text: "Search Neighbourhood",
             link: "/find_spaces",
-            color: "bg-blue-700"
+            color: "text-blue-700"
         },
         {
             text: "Get Match",
             link: "/get_match",
-            color: "bg-rose-200"
+            color: "text-rose-200"
         },
     ]
 
@@ -79,28 +77,23 @@ const MobileNav = () => {
         {
             text: "Community",
             link: "/community",
-            color: "bg-orange-500"
-        },
-        {
-            text: 'Career',
-            link: '/career',
-            color: ''
+            color: "text-orange-500"
         },
 
         {
             text: "Pricing",
             link: "/pricing",
-            color: "bg-blue-300"
+            color: "text-blue-300"
         },
         {
             text: "Policy",
             link: "/policy",
-            color: "bg-orange-200"
+            color: "text-orange-200"
         },
         {
             text: "Privacy",
             link: "/privacy",
-            color: "bg-blue-600"
+            color: "text-blue-600"
         },
 
     ]
@@ -124,7 +117,7 @@ const MobileNav = () => {
                         <div className=" grid gap-2 border-b pb-4">
                             {
                                 traditionalNavItmes.map((item: Item, i) => (
-                                    <Card key={i} item={item} />
+                                    <TraditionalItemsCard key={i} item={item} />
 
                                 ))
                             }
@@ -133,7 +126,7 @@ const MobileNav = () => {
                         <div className=" grid gap-2 border-b pb-4">
                             {
                                 realDealItems.map((item: Item, i) => (
-                                    <Card key={i} item={item} />
+                                    <RealDealsCard key={i} item={item} />
 
                                 ))
                             }
@@ -142,7 +135,7 @@ const MobileNav = () => {
                         <div className=" grid gap-2 border-b pb-4">
                             {
                                 specialItems.map((item: Item, i) => (
-                                    <Card key={i} item={item} />
+                                    <SpecialDealsCard key={i} item={item} />
 
                                 ))
                             }
@@ -161,16 +154,88 @@ const MobileNav = () => {
 export default MobileNav
 
 
-function Card({ item }: { item: Item }) {
+function RealDealsCard({ item }: { item: Item }) {
+
+    const {link, text, color} = item
 
     const pathname = usePathname()
 
     return (
         <SheetClose asChild>
-            <Link href={item.link} className={`${pathname === item.link ? "bg-blue-100 text-myblue" : ""} `}>
-                <div className={`${pathname === item.link ? " text-mybluetwo" : "text-white/90"} p-1  w-max flex gap-4 items-center`}>
-                    <span className={`${item.color ? item.color : "bg-white"} h-2 w-2 rounded-full aspect-square pt-1`}></span>
-                    <span className="border-b border-transparent hover:border-white">{item.text} </span>
+            <Link href={link} className={`${pathname === link ? "bg-blue-100 text-myblue" : ""} `}>
+                <div className={`${pathname === link ? " text-mybluetwo" : "text-white/90"} w-max grid grid-cols-[2rem_1fr]`}>
+                    <span className={`${color ? color : "text-white"}`}>
+                        {
+                            text == "How It Works" ?
+                            (<MdOutlineWorkspacePremium />):
+                            text == "Search For Co-renters" ?
+                            (<SearchCheckIcon className="w-4 h-4"/>) :
+                            text == "Search Neighbourhood" ?
+                            (<FaMagnifyingGlass/>):
+                            (<FaUserGroup/>)
+                        }
+
+                    </span>
+                    <span className="border-b border-transparent hover:border-white font-sans text-sm">{text} </span>
+                </div>
+            </Link>
+        </SheetClose>
+    )
+
+}
+
+
+function TraditionalItemsCard({ item }: { item: Item }) {
+
+    const {text, link, color} = item
+
+    const pathname = usePathname()
+
+    return (
+        <SheetClose asChild>
+            <Link href={link} className={`${pathname === link ? "bg-blue-100 text-myblue" : ""} `}>
+                <div className={`${pathname === link ? " text-mybluetwo" : "text-white/90"} p-1  w-max grid grid-cols-[2rem_1fr]`}>
+                    <span className={``}>
+                        {
+                            text == "Home" ?
+                            (<HomeIcon className={`${color ? color : "text-white"} w-[18px] h-[18px]`}/>):
+                            text == "Contact" ?
+                            (<Contact className={`${color ? color : "text-white"} w-[18px] h-[18px]`}/>):
+                            (<FcAbout />)
+                        }
+                    </span>
+                    <span className="border-b border-transparent hover:border-white font-sans text-sm">{text} </span>
+                </div>
+            </Link>
+        </SheetClose>
+    )
+
+}
+
+
+
+function SpecialDealsCard({ item }: { item: Item }) {
+
+    const {text, link, color} = item
+
+    const pathname = usePathname()
+
+    return (
+        <SheetClose asChild>
+            <Link href={link} className={`${pathname === link ? "bg-blue-100 text-myblue" : ""} `}>
+                <div className={`${pathname === link ? " text-mybluetwo" : "text-white/90"} p-1  w-max grid grid-cols-[2rem_1fr]`}>
+                    <span className={``}>
+                        {
+                            text == "Community" ?
+                            (<CgCommunity className={`${color ? color : "text-white"} w-[18px] h-[18px]`}/>):
+                            text == "Privacy" ?
+                            (<FcPrivacy className={`${color ? color : "text-white"} w-[18px] h-[18px]`}/>):
+                            text == "Pricing" ?
+                            (<MdPriceChange />) :
+                            (<MdPolicy/>)
+                        }
+                    </span>
+                    <span className="border-b border-transparent hover:border-white font-sans text-sm">{text} </span>
                 </div>
             </Link>
         </SheetClose>

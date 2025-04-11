@@ -19,8 +19,8 @@ const WhatWeDo = () => {
             <div className='col-span-2 grid gap-4 px-4 md:px-8 lg:px-16'>
                 <h3 className='text-2xl md:4xl font-medium text-black/90'>We help you to cut your rent in half or more</h3>
                 <div className="">
-                    <p className='text-gray-600'> With our sophisticated matching algorithm, you can be matched with suitable homes or office apartments in your preferred location; and also, you can be matched with a perfect person to share your space and rent with; and therefore, cut your rent by more than 50%.</p>
-                    <p className='text-gray-600'>Trusted by 10,000+ students across 50+ universities, you too can use KoRent to find your perfect co-living match and save up to 60% on rent.</p>
+                    <p className='text-gray-600'> With our sophisticated matching algorithm, you can be matched with a perfect person to share your space and rent with; and therefore, cut your rent by more than 50%.</p>
+                    <p className='text-gray-600'>Trusted by 10,000+ students across 50+ higher institutions, you too can use Split Space to find your perfect co-living match and save up to 60% on rent.</p>
                 </div>
                 <Facts />
             </div>

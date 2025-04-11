@@ -1,4 +1,5 @@
-import PersonalInfo from "@/app/partial/dashboard/personal_info"
+import Info from "@/app/partial/dashboard/info"
+
 
 
 const PerosnalInfoPage = async() => {
@@ -12,10 +13,7 @@ const PerosnalInfoPage = async() => {
 
   return (
     <div className="min-w-full min-h-full">
-      
-      <PersonalInfo profile={profile}/>
-     
-      
+      <Info profile={profile}/> 
     </div>
   )
 }

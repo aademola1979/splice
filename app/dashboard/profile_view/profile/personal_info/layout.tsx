@@ -1,12 +1,11 @@
-import SubDashboardBar from "@/app/partial/dashboard/bars/SubDashboardBar";
-import LinkDashboardHeader from "@/app/partial/dashboard/LinkDashboardHeader";
+
 import SubDashboardHeader from "@/app/partial/dashboard/SubDashboardHeader";
 
 
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-    const items = [
+    /*const items = [
     
         {
           icon: '',
@@ -32,20 +31,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           },
     
         
-      ]
+      ]*/
     return (
         <section className="grid  grid-rows-[auto_1fr] gap-4 min-h-full w-full relative">
         <div className="grid  gap-2">
-        <SubDashboardHeader className="">Your Personal Info</SubDashboardHeader>
-        <SubDashboardBar className="border-0">
-         {
-           items.map(({text, link}, i)=>(
-             <LinkDashboardHeader className="" key={i} link={link}>
-               <span>{text}</span>
-             </LinkDashboardHeader>
-           ))
-         }
-         </SubDashboardBar>
+        <SubDashboardHeader className="text-2xl">Your Info</SubDashboardHeader>
+        
         </div>
         <div className="">
           {children}
