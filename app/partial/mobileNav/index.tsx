@@ -15,6 +15,7 @@ import { FaMagnifyingGlass, FaUserGroup } from "react-icons/fa6";
 import { CgCommunity } from "react-icons/cg";
 import { MdOutlineWorkspacePremium, MdPolicy, MdPriceChange} from "react-icons/md";
 import { FcAbout, FcPrivacy } from "react-icons/fc";
+import { traditionalNavItmes, realDealItems, specialItems } from "@/lib/data";
 
 type Item = {
     text: string,
@@ -27,80 +28,6 @@ const MobileNav = () => {
     const pathname = usePathname()
 
 
-
-    const traditionalNavItmes = [
-        {
-            text: "Home",
-            link: "/",
-            color: ""
-        },
-        {
-            text: "About",
-            link: "/about",
-            color: "text-green-300"
-        },
-
-        {
-            text: "Contact",
-            link: "/contact",
-            color: "text-green-400"
-        },
-
-    ]
-
-    const realDealItems = [
-        {
-            text: "How It Works",
-            link: "/how_it_works",
-            color: "text-blue-500"
-        },
-        {
-            text: "Search For Co-renters",
-            link: "/find_partners",
-            color: ""
-        },
-        {
-            text: "Search Neighbourhood",
-            link: "/find_spaces",
-            color: "text-blue-700"
-        },
-        {
-            text: "Get Match",
-            link: "/get_match",
-            color: "text-rose-200"
-        },
-    ]
-
-    const specialItems = [
-
-
-        {
-            text: "Community",
-            link: "/community",
-            color: "text-orange-500"
-        },
-
-        {
-            text: "Pricing",
-            link: "/pricing",
-            color: "text-blue-300"
-        },
-        {
-            text: "Policy",
-            link: "/policy",
-            color: "text-orange-200"
-        },
-        {
-            text: "Privacy",
-            link: "/privacy",
-            color: "text-blue-600"
-        },
-
-    ]
-
-
-
-
     return (
         <div className="">
             <Sheet >
@@ -109,7 +36,7 @@ const MobileNav = () => {
                 </SheetTrigger>
                 <SheetTitle></SheetTitle>
                 <SheetDescription></SheetDescription>
-                <SheetContent side="left" className="min-h-[100vh] overflow-x-auto pt-4 flex flex-col justify-between gap-4 bg-myblue ">
+                <SheetContent x_style="text-white" side="left" className="min-h-[100vh] overflow-x-auto pt-4 flex flex-col justify-between gap-4 bg-myblue ">
                     <div className="flex flex-col gap-4">
                         <div className="w-full border-b pb-2">
                             <Logo className="h-[1.75rem] w-[2rem]" />

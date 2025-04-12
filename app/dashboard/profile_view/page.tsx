@@ -2,7 +2,7 @@
 
 const ProfileMainPage = () => {
   return (
-    <div>ProfileMainPage</div>
+    <div className="">ProfileMainPage</div>
   )
 }
 
