@@ -149,3 +149,28 @@ export const specialItems = [
     },
 
 ]
+
+
+export  const preferenceItems = [
+    
+    
+    
+    {
+     
+      text: 'Accommodation Preferences',
+      link: '/dashboard/profile_view/profile/preferences/accommodation_preferences'
+    },
+
+    {
+     
+      text: 'Partner Preferences',
+      link: '/dashboard/profile_view/profile/preferences/partners_preferences'
+    },
+    {
+      
+      text: 'Additional Preferences',
+      link: '/dashboard/profile_view/profile/preferences/additional_preferences'
+    },
+    
+    
+  ]

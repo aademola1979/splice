@@ -18,7 +18,7 @@ const DashBoardSideBar = ({  children }: { children: React.ReactNode }) => {
                 <SheetDescription className="hidden"></SheetDescription>
                 <SheetContent x_style="" side="left" className="min-h-[100vh] w-full pt-4 ">
                     <div className="grid grid-rows-[auto_1fr] h-full">
-                        <div className="w-full">
+                        <div className="w-full mb-4">
                             <Logo className="h-[1.75rem] w-[2rem]" />
                         </div>
 

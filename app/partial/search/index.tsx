@@ -19,7 +19,7 @@ const CustomSearch = ({ className }: { className: string }) => {
         </SheetTrigger>
         <SheetTitle></SheetTitle>
         <SheetDescription></SheetDescription>
-        <SheetContent side="top" className="min-h-[100vh] overflow-x-auto pt-[1rem] flex flex-col gap-4 bg-myblue">
+        <SheetContent x_style="" side="top" className="min-h-[100vh] overflow-x-auto pt-[1rem] flex flex-col gap-4 bg-myblue">
           <SectionWrapper className="flex flex-col gap-4">
             <div className="w-full">
               <Logo className="h-[1.75rem] w-[2rem]" />
