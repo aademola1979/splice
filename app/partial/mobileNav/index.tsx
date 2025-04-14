@@ -31,8 +31,8 @@ const MobileNav = () => {
     return (
         <div className="">
             <Sheet >
-                <SheetTrigger asChild className="" >
-                    <Menu className={`block md:hidden text-xl ${pathname === '/' ? 'text-white' : 'text-myblue'}`} />
+                <SheetTrigger asChild className="hover:bg-gray-300 cursor-pointer" >
+                    <Menu className={`block md:hidden text-xl ${pathname === '/' ? 'text-white' : 'text-myblue'} `} />
                 </SheetTrigger>
                 <SheetTitle></SheetTitle>
                 <SheetDescription></SheetDescription>
@@ -41,7 +41,7 @@ const MobileNav = () => {
                         <div className="w-full border-b pb-2">
                             <Logo className="h-[1.75rem] w-[2rem]" />
                         </div>
-                        <div className=" grid gap-2 border-b pb-4">
+                        <div className=" grid gap-2 border-b text-xs pb-4">
                             {
                                 traditionalNavItmes.map((item: Item, i) => (
                                     <TraditionalItemsCard key={i} item={item} />
@@ -50,7 +50,7 @@ const MobileNav = () => {
                             }
                         </div>
 
-                        <div className=" grid gap-2 border-b pb-4">
+                        <div className=" grid gap-2 border-b text-xs pb-4">
                             {
                                 realDealItems.map((item: Item, i) => (
                                     <RealDealsCard key={i} item={item} />
@@ -59,7 +59,7 @@ const MobileNav = () => {
                             }
                         </div>
 
-                        <div className=" grid gap-2 border-b pb-4">
+                        <div className=" grid gap-2 border-b text-xs pb-4">
                             {
                                 specialItems.map((item: Item, i) => (
                                     <SpecialDealsCard key={i} item={item} />

@@ -1,21 +1,20 @@
 'use client'
 import DashBoardSideBar from "../DashBoardSideBar"
 import { SheetClose } from "@/components/ui/sheet"
-import { profileSidebarItems } from "@/lib/data"
+import { postItems } from "@/lib/data"
 import Link from "next/link"
 import { SidebarItemsType } from "@/lib/types"
 import { usePathname } from "next/navigation"
-import { ArrowLeft, Info } from "lucide-react"
-import { MdOutlineRoomPreferences } from "react-icons/md"
-import { CgProfile } from "react-icons/cg"
+import { ArrowLeft, HomeIcon} from "lucide-react"
+import { CgFileDocument } from 'react-icons/cg'
+import { MdCreate, MdEditDocument, MdRecommend } from 'react-icons/md'
 
-
-const ProfileMobileNav = () => {
+const PostMobileNav = () => {
     return (
         <DashBoardSideBar >
             <div className="flex flex-col gap-3 pt-4">
                 {
-                    profileSidebarItems.map((item, i) => (
+                    postItems.map((item, i) => (
                         <MobileSidebarLink item={item} key={i} />
 
                     ))
@@ -25,7 +24,7 @@ const ProfileMobileNav = () => {
     )
 }
 
-export default ProfileMobileNav
+export default PostMobileNav
 
 
 
@@ -41,11 +40,15 @@ const MobileSidebarLink = ({ item }: { item: SidebarItemsType }) => {
                         {
                             text == "Dashboard" ?
                                 (<ArrowLeft className="font-thin h-5" />) :
-                                text == "Profile" ?
-                                (<CgProfile />) :
-                                text == "Personal Info" ?
-                                (<Info className="h-4 w-4" />) :
-                                (<MdOutlineRoomPreferences className="h-5 w-5" />)
+                                text == "Post Main Page" ?
+                                (<HomeIcon />) :
+                                text == "All Posts" ?
+                                (<CgFileDocument className="h-4 w-4" />) :
+                                text == "Create Post" ?
+                                (<MdCreate className="" />) :
+                                text == "My Posts" ?
+                                (<MdEditDocument/>):
+                                (<MdRecommend/>)
                         }
                     </span>
                     <span className="border-b border-transparent hover:border-white font-sans text-xs">{text} </span>

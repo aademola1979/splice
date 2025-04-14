@@ -18,7 +18,7 @@ const ProfileSidebar = () => {
   return (
     <SideBarContainer className="hidden md:block">
             <Link href='/dashboard/profile_view'>
-              <SubDashboardHeader className="text-2xl flex gap-4">
+              <SubDashboardHeader className="text-2xl flex gap-4 mb-4">
                 <span className="pt-1 text-blue-400"><CgProfile /></span>
                 <span>Profile</span>
               </SubDashboardHeader>
@@ -27,7 +27,7 @@ const ProfileSidebar = () => {
               {
                 profileSidebarItems.map(({ text, link }, i) => (
                   <Link key={i} href={link}
-                  className={`1 grid grid-cols-[2rem_1fr] px-2 rounded border-l-4
+                  className={`1 grid grid-cols-[2rem_1fr] px-2 text-base rounded border-l-4
                     ${link == pathname ? "border-blue-700" : "border-white"}`}>
                     {
                       text == "Profile" ?

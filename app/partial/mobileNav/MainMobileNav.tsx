@@ -53,7 +53,7 @@ const MobileSidebarLink = ({ item }: { item: SidebarItemsType }) => {
                                 (<CgFileDocument/>)
                         }
                     </span>
-                    <span className="border-b border-transparent hover:border-white font-sans text-sm">{text} </span>
+                    <span className="border-b border-transparent hover:border-white font-sans text-xs">{text} </span>
                 </div>
             </Link>
         </SheetClose>

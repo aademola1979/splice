@@ -13,9 +13,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="block md:hidden pt-4 pl-2">
         <ProfileMobileNav />
       </div>
-
       <ProfileSidebar />
-      <div className="p-5 md-10 lg:p- border bg-white">
+      <div className="p-5 border bg-white">
         {children}
       </div>
     </section>

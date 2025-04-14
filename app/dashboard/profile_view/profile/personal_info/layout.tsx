@@ -1,5 +1,6 @@
 
 import SubDashboardHeader from "@/app/partial/dashboard/SubDashboardHeader";
+import SearchLink from "@/app/partial/search/SearchLink";
 
 
 
@@ -34,9 +35,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       ]*/
     return (
         <section className="grid  grid-rows-[auto_1fr] gap-4 min-h-full w-full relative">
-        <div className="grid  gap-2">
+        <div className="grid w-full gap-4 md:gap-12 px-2">
+        <SearchLink item={{ link:"/", text:"Search Site" }} />
         <SubDashboardHeader className="text-2xl">Your Info</SubDashboardHeader>
-        
         </div>
         <div className="">
           {children}

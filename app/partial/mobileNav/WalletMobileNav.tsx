@@ -34,9 +34,9 @@ const MobileSidebarLink = ({ item }: { item: SidebarItemsType }) => {
     return (
 
         <SheetClose asChild>
-            <Link href={link} className={`${pathname === link ? "bg-blue-100 text-myblue" : ""} p-1 rounded`}>
-                <div className={`${pathname === link ? " text-mybluetwo" : "text-black/90"} w-max grid grid-cols-[2rem_1fr]`}>
-                    <span>
+            <Link href={link} className={`${pathname === link ? "border-blue-700 text-myblue" : "border-white"} p-1 rounded border-l-4`}>
+                <div className={`${pathname === link ? " " : ""} w-max grid grid-cols-[2rem_1fr]`}>
+                    <span className={`${pathname == link ? "text-blue-700" : ""}`}>
                         {
                             text == "Dashboard" ?
                             (<ArrowLeft className="font-thin h-5"/>) :
@@ -46,7 +46,7 @@ const MobileSidebarLink = ({ item }: { item: SidebarItemsType }) => {
                             (<MdAccountBalanceWallet className="h-5 w-5"/>)
                         }
                     </span>
-                    <span className="border-b border-transparent hover:border-white font-sans text-sm">{text} </span>
+                    <span className="border-b border-transparent hover:border-white font-sans text-xs">{text} </span>
                 </div>
             </Link>
         </SheetClose>

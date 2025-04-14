@@ -2,7 +2,9 @@
 
 const PostMainPage = () => {
   return (
-    <div>PostMainPage</div>
+    <div className="h-full w-full">
+
+    </div>
   )
 }
 

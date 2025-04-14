@@ -174,3 +174,43 @@ export  const preferenceItems = [
     
     
   ]
+
+
+  export const postItems = [
+    {
+     
+        text: 'Dashboard',
+        link: '/dashboard'
+  
+      },
+    {
+     
+      text: 'Post Main Page',
+      link: '/dashboard/post_view'
+
+    },
+    {
+      
+      text: 'All Posts',
+      link: '/dashboard/post_view/posts/all_posts'
+
+    },
+    {
+      
+      text: 'Create Post',
+      link: '/dashboard/post_view//posts/create_post'
+
+    },
+    {
+     
+      text: 'My Posts',
+      link: '/dashboard/post_view/posts/my_posts'
+
+    },
+    {
+    
+      text: 'Recommended Posts',
+      link: '/dashboard/post_view/posts/recommended_posts'
+
+    }
+  ]
