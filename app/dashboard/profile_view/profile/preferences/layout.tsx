@@ -13,7 +13,7 @@ return (
     <section className="w-full grid  grid-rows-[auto_1fr] gap-4 min-h-[100vh] max-w-[100%] relative">
     <div className="grid  gap-2">
       <div className="grid gap-4">
-        <SearchLink item={{ link:"/", text:"Search Site" }}/>
+        <SearchLink className="" item={{ link:"/", text:"Search Site" }}/>
     <SubDashboardHeader className="text-2xl">Preference Info</SubDashboardHeader>
     </div>
     <SubDashboardBar className="border-0">
