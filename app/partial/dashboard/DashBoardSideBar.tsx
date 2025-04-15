@@ -1,7 +1,7 @@
 'use client'
 
 import { Sheet, SheetTrigger, SheetContent, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import React from "react";
 import { FcMenu } from "react-icons/fc";
 

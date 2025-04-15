@@ -1,6 +1,7 @@
 
 import ProfileSidebar from "@/app/partial/dashboard/bars/sidebars/ProfileSidebar";
 import ProfileMobileNav from "@/app/partial/mobileNav/ProfileMobileNav";
+import SearchLink from "@/app/partial/search/SearchLink";
 
 
 
@@ -14,8 +15,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <ProfileMobileNav />
       </div>
       <ProfileSidebar />
-      <div className="p-5 border bg-white">
-        {children}
+      <div className="p-5 page-container border bg-white grid grid-rows-[auto_1fr] gap-4">
+        <SearchLink className="" item={{link:"/dashboard/search/search_site", text:"Search Site"}} />
+        <>
+          {children}
+        </>
+     
       </div>
     </section>
   )

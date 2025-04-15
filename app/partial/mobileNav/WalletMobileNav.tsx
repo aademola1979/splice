@@ -1,5 +1,5 @@
 'use client'
-import DashBoardSideBar from "../DashBoardSideBar"
+import DashBoardSideBar from "../dashboard/DashBoardSideBar"
 import { SheetClose } from "@/components/ui/sheet"
 import { walletSidebarItems } from "@/lib/data"
 import Link from "next/link"

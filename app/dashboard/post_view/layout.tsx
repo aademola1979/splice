@@ -1,5 +1,6 @@
 import PostSidebar from "@/app/partial/dashboard/bars/sidebars/PostSidebar";
 import PostMobileNav from "@/app/partial/mobileNav/PostMobileNav";
+import SearchLink from "@/app/partial/search/SearchLink";
 
 
 
@@ -12,9 +13,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <PostMobileNav />
      </div>
      <PostSidebar />
-      <>
+      <div className="grid grid-rows-[auto_1fr] h-full page-container">
+      <SearchLink className="mb-4" item={{ link:"/dashboard/search/search_post", text:"Search Posts" }}/>
         {children}
-      </>
+      </div>
     </section>
   )
 };

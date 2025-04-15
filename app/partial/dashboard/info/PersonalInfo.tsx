@@ -1,9 +1,10 @@
-import { Edit } from "lucide-react"
+
 import InfoCardWrapper from "../InfoCardWrapper"
 import InfoContainer from "../InfoContainer"
 import InfoLabel from "../InfoLabel"
 import InfoText from "../InfoText"
 import { MdDeleteOutline } from "react-icons/md"
+import EditModal from "../../modals/EditModal"
 
 type PersonalInfoDetails = {
     first_name: string,
@@ -55,9 +56,10 @@ const PersonalInfo = ({ infoDetails }: { infoDetails: PersonalInfoDetails }) => 
                     </InfoContainer>
                 </div>
                 <div className="flex flex-col gap-1">
-                    <button className="p-1 border text-gray-700 hover:border-gray-400">
-                        <Edit className="h-5 w-5 text-gray-700 hover:border-gray-400" />
-                    </button>
+                    <EditModal className="">
+                        <div className="">Edite persoanl info</div>
+
+                    </EditModal>
                     <button className="p-1 border hover:border-gray-400">
                         <MdDeleteOutline className="h-5 w-5 text-gray-700" />
                     </button>

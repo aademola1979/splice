@@ -1,9 +1,9 @@
 
+import EditModal from "../../modals/EditModal"
 import InfoCardWrapper from "../InfoCardWrapper"
 import InfoContainer from "../InfoContainer"
 import InfoLabel from "../InfoLabel"
 import InfoText from "../InfoText"
-import { Edit } from "lucide-react"
 import { MdDeleteOutline } from "react-icons/md"
 
 type Address = {
@@ -43,9 +43,13 @@ const AddressInfo = ({ address }: { address: Address }) => {
           </InfoContainer>
         </div>
         <div className="flex flex-col gap-1 font-thin">
-          <button className="p-1 border text-gray-700 hover:border-gray-400">
-            <Edit className="h-5 w-5 text-gray-700" />
-          </button>
+            <EditModal className="">
+              <div className="flex items-center justify-center">
+              <span className="text-white p-5">edit address</span>
+              </div>
+              
+            </EditModal>
+          
           <button className="p-1 border hover:border-gray-400">
             <MdDeleteOutline className="h-5 w-5 text-gray-700" />
           </button>
